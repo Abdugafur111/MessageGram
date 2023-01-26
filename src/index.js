@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import state, {subscribe, updatedPostText} from './redux/state'
-import {addPost} from "./redux/state";
-import store from "./redux/state";
+import state, {subscribe, updatedPostText} from './redux/store'
+import {addPost} from "./redux/store";
+import store from "./redux/store";
 
 
 
