@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import state, {subscribe, updatedPostText} from './redux/store'
 import {addPost} from "./redux/store";
-import store from "./redux/store";
+import store from "./redux/redux-store";
 
 
 

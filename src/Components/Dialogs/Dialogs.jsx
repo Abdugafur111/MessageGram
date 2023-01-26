@@ -6,8 +6,8 @@ import {newMessageBodyActionCreator, sendMessageActionCreator} from "../../redux
 
 
 const Dialogs = (props) =>{
+    let state = props.dialogsPage;
 
-    let state = props.store.getState().dialogsPage;
 
     let dialogsElements = state.dialogsData.map(people =>(<DialogItem name={people.name} id = {people.id}/> ))
 
@@ -18,13 +18,13 @@ const Dialogs = (props) =>{
 
     let message = React.createRef();
 
-    let onNewMessageChange =(e) =>{
+    let onNewMessageChange =() =>{
         let body = message.current.value
-        props.store.dispatch(newMessageBodyActionCreator(body))
+        props.onNewMessageChanges(body)
     }
 
     let onSendButtonClick =()=>{
-        props.store.dispatch(sendMessageActionCreator())
+        props.onSendButtonClick()
     }
 
     return (
