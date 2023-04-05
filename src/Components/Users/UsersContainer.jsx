@@ -10,6 +10,7 @@ import {
 } from "../../redux/usersReducer";
 import axios from "axios";
 import Users from "./Users";
+import Preloader from "../common/Preloader/Preloader";
 
 
 class UserAPIComponent extends React.Component{
@@ -43,7 +44,7 @@ class UserAPIComponent extends React.Component{
 
     render() {
         return <>
-            {this.props.isFetching? <img src='https://i.pinimg.com/originals/84/e4/a5/84e4a59086383b1cfab40e342fb5e0f5.gif'/>:null}
+          <div>  {this.props.isFetching? <Preloader src={'https://i.pinimg.com/originals/84/e4/a5/84e4a59086383b1cfab40e342fb5e0f5.gif'}/> :null}</div>
             <Users totalUsersCount={this.props.totalUsersCount}
                       pageSize = {this.props.pageSize}
                       currentPage = {this.props.currentPage}
