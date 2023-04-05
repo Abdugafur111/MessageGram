@@ -6,20 +6,20 @@ import {newMessageBodyActionCreator, sendMessageActionCreator} from "../../redux
 
 
 const Dialogs = (props) =>{
-    let state = props.dialogsPage;
 
 
-    let dialogsElements = state.dialogsData.map(people =>(<DialogItem name={people.name} id = {people.id}/> ))
 
+    let dialogsElements = props.dialogsPage.dialogsData.map(people =>(<DialogItem name={people.name} id = {people.id}/> ))
 
-    let messageElements = state.messageData.map(message => (<Message message={message.message}/> ))
+    let messageElements = props.dialogsPage.messageData.map(message => (<Message message={message.message}/> ))
 
-    let newMessageBody = state.newMessageBody
+    let newMessageBody = props.dialogsPage.newMessageBody
 
     let message = React.createRef();
 
     let onNewMessageChange =() =>{
         let body = message.current.value
+
         props.onNewMessageChanges(body)
     }
 

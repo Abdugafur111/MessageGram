@@ -11,19 +11,29 @@ let initialState = {
 }
 
 const profilerReducer=(state = initialState,action)=>{
-    if(action.type === ADD_POST){
-        let newPost ={
-            id:4,
-            message:state.newPostText,
-            image : 'https://static.vecteezy.com/system/resources/thumbnails/006/487/917/small/man-avatar-icon-free-vector.jpg',
-            likecount:'0'
+    switch(action.type){
+        case ADD_POST:{
+            let newPost ={
+                id:4,
+                message:state.newPostText,
+                image : 'https://static.vecteezy.com/system/resources/thumbnails/006/487/917/small/man-avatar-icon-free-vector.jpg',
+                likecount:'0'
+            }
+            let stateCopy = {...state}
+            stateCopy.posts = [...state.posts]
+            stateCopy.posts.push(newPost)
+            stateCopy.newPostText = ' ';
+            return stateCopy
         }
-        state.posts.push(newPost);
-        state.newPostText = ' ';
-    }else if(action.type === UPDATE_NEW_POST){
-        state.newPostText = action.newText
+        case UPDATE_NEW_POST:{
+            let stateCopy = {...state}
+            stateCopy.newPostText = action.newText
+            return stateCopy
+        }
+        default:
+            return state
+
     }
-    return state
 }
 export default profilerReducer
 

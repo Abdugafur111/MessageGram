@@ -2,6 +2,7 @@ import React from "react";
 import classes from './Navbar.module.css'
 import {NavLink} from "react-router-dom";
 
+
 const Navbar = ()=>{
     return (
         <nav className={classes.nav}>
@@ -14,6 +15,9 @@ const Navbar = ()=>{
                 <div className={`${classes.item} ${classes.active}`}>
                 <NavLink to="/dialogs" className = { navData => navData.isActive ? classes.active : classes.item }>Message</NavLink>
                 </div>
+            <div className={`${classes.item} ${classes.active}`}>
+                <NavLink to="/users" className = { navData => navData.isActive ? classes.active : classes.item }>Users</NavLink>
+            </div>
 
 
             <div className={classes.item}>
