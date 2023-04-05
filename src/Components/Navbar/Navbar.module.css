@@ -2,7 +2,7 @@
 
     grid-area: n;
 
-    background-color: burlywood;
+    background-color: #e3c21b;
 
     padding: 20px;
 }
@@ -13,5 +13,5 @@
 }
 
 .item a.active {
-    color: gold;
+    color: #3269a8;
 }

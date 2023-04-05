@@ -3,7 +3,7 @@ import classes from './Header.module.css'
 const Header = ()=>{
     return (
         <header className={classes.header}>
-            <img src="https://cdn.pixabay.com/photo/2016/08/09/17/52/instagram-1581266__340.jpg" />
+            <img src="https://pbs.twimg.com/profile_images/858025245453582336/YcmC2QmK_400x400.jpg" />
         </header>
 
     );

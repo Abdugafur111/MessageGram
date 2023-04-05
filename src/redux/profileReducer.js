@@ -4,10 +4,10 @@ const UPDATE_NEW_POST = 'UPDATE-NEW-POST';
 let initialState = {
     posts : [
         {id: 1, message: "Hi, How are you?", image : 'https://cdn.iconscout.com/icon/free/png-256/avatar-370-456322.png', likecount: '10'},
-        {id: 2, message: "Hi, thanks I am fine", image : 'https://cdn-icons-png.flaticon.com/512/147/147142.png', likecount: '12'},
-        {id: 3, message: "How about you?", image : 'https://static.vecteezy.com/system/resources/thumbnails/006/487/917/small/man-avatar-icon-free-vector.jpg', likecount: '13'}
+        {id: 2, message: "Hi, thanks I am fine", image : 'https://cdn.iconscout.com/icon/free/png-256/avatar-370-456322.png', likecount: '12'},
+        {id: 3, message: "How about you?", image : 'https://cdn.iconscout.com/icon/free/png-256/avatar-370-456322.png', likecount: '13'}
     ],
-    newPostText: 'Hello'
+    newPostText: ''
 }
 
 const profilerReducer=(state = initialState,action)=>{
