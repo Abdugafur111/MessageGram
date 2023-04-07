@@ -12,7 +12,7 @@ const ProfileInfo = (props) =>{
             <img src='https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=612x612&w=0&k=20&c=A63koPKaCyIwQWOTFBRWXj_PwCrR4cEoOw2S9Q7yVl8='/>
             </div>
             <div className={s.descriptionBlock}>
-                <img src={props.profile.photos.small} alt=""/>
+                <img src={props.profile.photos.small} alt="profilePhoto"/>
                 ava + disc
             </div>
         </div>

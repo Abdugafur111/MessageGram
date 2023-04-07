@@ -1,10 +1,9 @@
 import React from "react";
 import s from "./Users.module.css";
-import userphoto from "../../assets/images/user.png";
 import {NavLink} from "react-router-dom";
 
 let Users =(props)=>{
-    let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize)
+  //  let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize)
     let pages = [];
     for (let i = 1; i <= 12; i++) {
         pages.push(i);
@@ -19,7 +18,7 @@ let Users =(props)=>{
 
                     <span>
                         <div className={s.cardHeader}>
-                           <NavLink to={'/profileContainer/'+u.id}> <img className={s.userPhoto} src={u.photos.small!=null? u.photos.small : 'https://cdn.iconscout.com/icon/free/png-256/avatar-370-456322.png'} alt=""/></NavLink>
+                           <NavLink to={'/profile/'+u.id}> <img className={s.userPhoto} src={u.photos.small!=null? u.photos.small : 'https://cdn.iconscout.com/icon/free/png-256/avatar-370-456322.png'} alt=""/></NavLink>
                         </div>
 
 
