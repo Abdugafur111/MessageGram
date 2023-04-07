@@ -1,15 +1,18 @@
-import {combineReducers, legacy_createStore, legacy_createStore as createStore} from "redux";
+import { combineReducers, createStore } from "redux";
 import profileReducer from "./profileReducer";
 import dialogsReducer from "./dialogsReducer";
 import usersReducer from "./usersReducer";
 
-let reducers = combineReducers({
-    profilePage:profileReducer,
-    dialogsPage:dialogsReducer,
-    usersPage:usersReducer
+const reducers = combineReducers({
+    profilePage: profileReducer,
+    dialogsPage: dialogsReducer,
+    usersPage: usersReducer
+});
 
-}
-)
+const store = createStore(reducers);
 
-let store = legacy_createStore(reducers);
-export default store
+store.subscribe(() => {
+    console.log("Current state:", store.getState());
+});
+
+export default store;

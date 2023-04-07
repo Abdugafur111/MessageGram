@@ -19,7 +19,7 @@ let Users =(props)=>{
 
                     <span>
                         <div className={s.cardHeader}>
-                           <NavLink to={'/profile/'+u.id}> <img className={s.userPhoto} src={u.photos.small!=null? u.photos.small : 'https://cdn.iconscout.com/icon/free/png-256/avatar-370-456322.png'} alt=""/></NavLink>
+                           <NavLink to={'/profileContainer/'+u.id}> <img className={s.userPhoto} src={u.photos.small!=null? u.photos.small : 'https://cdn.iconscout.com/icon/free/png-256/avatar-370-456322.png'} alt=""/></NavLink>
                         </div>
 
 

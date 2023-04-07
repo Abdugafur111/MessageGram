@@ -1,5 +1,7 @@
 const ADD_POST = 'ADD-POST';
 const UPDATE_NEW_POST = 'UPDATE-NEW-POST';
+const SET_USERS_PROFILE = 'SET-USERS-PROFILE';
+
 
 let initialState = {
     posts : [
@@ -7,7 +9,8 @@ let initialState = {
         {id: 2, message: "Hi, thanks I am fine", image : 'https://cdn.iconscout.com/icon/free/png-256/avatar-370-456322.png', likecount: '12'},
         {id: 3, message: "How about you?", image : 'https://cdn.iconscout.com/icon/free/png-256/avatar-370-456322.png', likecount: '13'}
     ],
-    newPostText: ''
+    newPostText: 'Hello',
+    profile:null,
 }
 
 const profilerReducer=(state = initialState,action)=>{
@@ -30,6 +33,10 @@ const profilerReducer=(state = initialState,action)=>{
             stateCopy.newPostText = action.newText
             return stateCopy
         }
+        case SET_USERS_PROFILE:{
+            let stateCopy = {...state,profile:action.profile}
+            return stateCopy
+        }
         default:
             return state
 
@@ -49,5 +56,13 @@ export const updateNewPostTextActionCreator = (text) =>{
     return {
         type: UPDATE_NEW_POST,
         newText:text
+    }
+}
+
+export const setUserProfile = (profile) =>{
+
+    return {
+        type: SET_USERS_PROFILE,
+        profile:profile
     }
 }
