@@ -19,7 +19,7 @@ const profilerReducer=(state = initialState,action)=>{
             let newPost ={
                 id:4,
                 message:state.newPostText,
-                image : 'https://static.vecteezy.com/system/resources/thumbnails/006/487/917/small/man-avatar-icon-free-vector.jpg',
+                image : 'https://cdn.iconscout.com/icon/free/png-256/avatar-370-456322.png',
                 likecount:'0'
             }
             let stateCopy = {...state}
