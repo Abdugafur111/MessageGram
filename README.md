@@ -30,7 +30,7 @@ A web application that allows users to practice Driver's License knowledge test 
 - python3 app.py
 
 ### File Structure
-
+```
 .
 ├── DMV
 │ ├── **init**.py
@@ -62,4 +62,5 @@ A web application that allows users to practice Driver's License knowledge test 
 ├── app.py
 └── instance
 └── databaseDMV.db
-'''
+```
+
